@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <defs>
+    <linearGradient id="arch-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="box-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="box-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <linearGradient id="box-indigo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#4338ca" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="600" fill="url(#arch-bg)" />
+
+  <!-- Title -->
+  <text x="50" y="45" fill="#f8fafc" font-family="sans-serif" font-size="20" font-weight="bold">JTAGForge Pro — Silicon Systems Architecture (IEEE 1149.1 / 1149.6)</text>
+  <text x="50" y="70" fill="#94a3b8" font-family="sans-serif" font-size="13">Modular Layering: Finite State Machine &bull; Bitfield Codec &bull; BSDL Compiler &bull; Hardware Security Auditor</text>
+
+  <!-- UI & Orchestration Layer -->
+  <rect x="50" y="95" width="900" height="70" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+  <text x="75" y="125" fill="#38bdf8" font-family="sans-serif" font-size="14" font-weight="bold">Presentation &amp; Automation Layer</text>
+  <text x="75" y="148" fill="#94a3b8" font-family="sans-serif" font-size="12">Interactive Web Studio (app.js + jtag-forge.css) &bull; Standalone Headless Python CLI (jtag-cli.py)</text>
+
+  <!-- Core Engine Tier -->
+  <g transform="translate(50, 195)">
+    <!-- TAP Engine -->
+    <rect x="0" y="0" width="280" height="180" rx="8" fill="#0b0f17" stroke="#06b6d4" stroke-width="1.5" />
+    <rect x="15" y="15" width="250" height="30" rx="4" fill="url(#box-cyan)" />
+    <text x="25" y="35" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="bold">JtagTapEngine (FSM)</text>
+    <text x="15" y="70" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; 16-State IEEE 1149.1 FSM</text>
+    <text x="15" y="90" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; BFS Shortest-Path TMS Finder</text>
+    <text x="15" y="110" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; DR / IR Shift Register Sim</text>
+    <text x="15" y="130" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; 5-Clock Hardware Reset Rule</text>
+    <text x="15" y="150" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; State Transition Matrix</text>
+
+    <!-- Codec Engine -->
+    <rect x="310" y="0" width="280" height="180" rx="8" fill="#0b0f17" stroke="#10b981" stroke-width="1.5" />
+    <rect x="325" y="15" width="250" height="30" rx="4" fill="url(#box-emerald)" />
+    <text x="335" y="35" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="bold">JtagCodecEngine (IDCODE)</text>
+    <text x="325" y="70" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; 32-Bit IDCODE Dissector</text>
+    <text x="325" y="90" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; JEDEC JEP106 Manufacturer DB</text>
+    <text x="325" y="110" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; Mandatory Bit 0 Validator</text>
+    <text x="325" y="130" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; Instruction Opcode Resolver</text>
+    <text x="325" y="150" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; Custom IDCODE Synthesizer</text>
+
+    <!-- BSDL Engine -->
+    <rect x="620" y="0" width="280" height="180" rx="8" fill="#0b0f17" stroke="#6366f1" stroke-width="1.5" />
+    <rect x="635" y="15" width="250" height="30" rx="4" fill="url(#box-indigo)" />
+    <text x="645" y="35" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="bold">JtagBsdlEngine (VHDL)</text>
+    <text x="635" y="70" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; Formal BSDL Syntax Parser</text>
+    <text x="635" y="90" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; Boundary Register Length Map</text>
+    <text x="635" y="110" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; Mandatory Opcodes (BYPASS/EXTEST)</text>
+    <text x="635" y="130" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; Entity Pin Port Resolution</text>
+    <text x="635" y="150" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; Clean BSDL Template Gen</text>
+  </g>
+
+  <!-- Security & Synthesizer Tier -->
+  <g transform="translate(50, 405)">
+    <!-- Security Auditor -->
+    <rect x="0" y="0" width="435" height="160" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+    <text x="20" y="30" fill="#f59e0b" font-family="sans-serif" font-size="14" font-weight="bold">🛡️ JtagSecurityAuditor (10-Point Silicon Audit)</text>
+    <text x="20" y="60" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; Debug Port Lock &amp; RDP Fusing (Levels 0, 1, 2)</text>
+    <text x="20" y="80" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; Memory Readout Vulnerability (AHB-AP / AXI-AP Direct Flash Dump)</text>
+    <text x="20" y="100" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; EXTEST Boundary Pin Hijacking &amp; Malicious Overdrive Defense</text>
+    <text x="20" y="120" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; Anti-Tamper Zeroization &amp; Voltage/Clock Glitch Resistance Checks</text>
+    <text x="20" y="140" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; ISO/SAE 21434 &amp; Common Criteria Hardware Compliance</text>
+
+    <!-- Synthesis Output -->
+    <rect x="465" y="0" width="435" height="160" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+    <text x="485" y="30" fill="#10b981" font-family="sans-serif" font-size="14" font-weight="bold">💾 Synthesis &amp; ATE Vector Generator</text>
+    <text x="485" y="60" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; OpenOCD Hardware Target Configuration Script (.cfg)</text>
+    <text x="485" y="80" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; Serial Vector Format (SVF) Test Scripts for In-Circuit Testers</text>
+    <text x="485" y="100" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; Automated JTAG Boundary-Scan Vectors (SIR &amp; SDR)</text>
+    <text x="485" y="120" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; Headless CI/CD Regression Test Bench Compatibility</text>
+    <text x="485" y="140" fill="#cbd5e1" font-family="sans-serif" font-size="11">&bull; Standalone Distribution Archive (jtagforge-pro-v1.0.0.zip)</text>
+  </g>
+</svg>
